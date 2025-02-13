@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This is some text.
+  </div>
+  <script>
+    // Incorrectly using innerHTML to append child nodes
+    document.getElementById("myDiv").innerHTML += "<p>This is a new paragraph.</p>";
+    //Correct way of using innerHTML to append child nodes
+    document.getElementById("myDiv").innerHTML = document.getElementById("myDiv").innerHTML + "<p>This is a new paragraph.</p>";
+  </script>
+</body>
+</html>
